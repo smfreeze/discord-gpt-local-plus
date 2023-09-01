@@ -49,28 +49,31 @@ async def on_ready():
 @client.event
 async def on_message(message):
     print(f'\033[1;32m[{time.strftime("%H:%M:%S")}]\033[0m {message.author.name}: {message.content}\033[0m')
-    #So the bot doesn't respond to itself:
+    # So the bot doesn't respond to itself:
     if message.author == client.user:
         return
     
-    # Each channel has its own history.
-    # When a history for a channel is downloaded, it is added to the dictionary of histories for channels.
-    async with message.channel.typing():
+    async with message.channel.typing(): #Typing effect
+        # Each channel has its own history.
+        # When a history for a channel is downloaded, it is added to the dictionary of histories for channels. Below checks if the channel for the given message has its history downloaded, if not, it does so:
         if message.channel.id in channel_message_history_dictionary:
             pass
         else:
             print(f'\033[1;32mChat history for channel {message.channel} downloaded!\033[0m')
             channel_message_history_dictionary.update({message.channel.id : await history.parse_history(await history.download_history(message, int(config.get('AI_BOT_CONFIG', 'download_history_length'))), bot_name)})
         
-        #The following builds the prompt, gets the response and sends the message.
+        # The following builds the prompt for the message, gets the response and sends the message.
         response = await oogapi.get_response(await util.build_prompt(bot_name, config.get('AI_BOT_CONFIG', 'character_prompt'), channel_message_history_dictionary[message.channel.id], message))
         await message.channel.send(response[:2000])
 
-        #This adds the messages just received and sent to the correct channel history
+        # This adds the messages just received and sent to the correct channel history:
+        # Users message:
         channel_message_history_dictionary.update({message.channel.id : await history.add_message(channel_message_history_dictionary[message.channel.id], message, bot_name)})
+        # Bots response:
         channel_message_history_dictionary.update({message.channel.id : await history.add_message_bot(channel_message_history_dictionary[message.channel.id], response.replace('\n', ' '), bot_name)})
 
 
+# /clearchathistory command
 @tree.command(name = "clearchathistory", description = "Clears the chat history the bot has, whilst keeping the actual messages in your discord server!") #guild=discord.Object(id=583025391393046570)
 async def clear_chat_history(interaction: discord.Integration):
     await interaction.response.send_message('Working on it...')
