@@ -5,7 +5,7 @@ Records chat history up to 99 messages for EACH discord channel (each channel wi
 
 ### Examples:
 
-ah fuck this ill do it tomorrow...
+[Example 1](https://github.com/smfreeze/discord-local-ai-chatbot/assets/117759431/40fd7f89-6d20-426f-977a-417879b6738e)
 
 
 ## Setup
