@@ -7,6 +7,8 @@ Records chat history up to 99 messages for EACH discord channel (each channel wi
 
 ![Example](https://github.com/smfreeze/discord-local-ai-chatbot/assets/117759431/40fd7f89-6d20-426f-977a-417879b6738e | height=502px | width =365px)
 
+<img src="https://github.com/smfreeze/discord-local-ai-chatbot/assets/117759431/40fd7f89-6d20-426f-977a-417879b6738e" width=365px height=502px>
+
 
 ## Setup
 ### Step 1:
