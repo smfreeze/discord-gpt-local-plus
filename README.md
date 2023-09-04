@@ -6,3 +6,8 @@ Records chat history up to 99 messages for EACH discord channel (each channel wi
 ### Examples:
 
 ah fuck this ill do it tomorrow...
+
+
+## Setup
+
+git clone 
