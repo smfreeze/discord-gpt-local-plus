@@ -29,13 +29,13 @@ Complete oogabooga setup guide below:
 ## Oogabooga setup
 (Thanks [DeSinc](https://github.com/DeSinc/SallyBot) for some data regarding this Oogabooga setup guide)
 <br><br>
-Warning: For the average 7B model, it requires a card with at least 6GB of VRAM.
+Warning: For the average 7B model, it requires a card with at least 6GB of VRAM, 10GB for 13B.
 
 Download and install [Oobabooga from their repo here](https://github.com/oobabooga/text-generation-webui). Information on how to install in README, but basically just use 1-click installer.
 
-After downloading and unzipping the 1-click installer, run `start_windows.bat`. The installer is interactive and you will need to enter your GPU device when prompted (could use CPU mode but not recommended, especially for the CPU oriented CS:GO)
+After downloading and unzipping the 1-click installer, run `start_windows.bat`. The installer is interactive and you will need to enter your GPU device when prompted (could use CPU mode, but GPU mode recommended by me)
 
-The install script should then give you a web address to the web ui after installing requirements, go to the model section. Install a model (look on HugginFace), copy the model name and paste into model download section (many tutorials of this exist)
+The install script should then give you a web address to the web ui after installing requirements, go to the model section of said web ui. Install a model (look on HugginFace), copy the model name and paste into model download section (many tutorials of this exist) and then download.
 
 After the installing has finished you need to set up the arguements in the `webui.py` file to allow the script to communicate with Oobabooga. It can be found near the top of the file.
 
@@ -60,25 +60,31 @@ Arguments to be added here include:
 Example of args:
 `'--model TheBloke_Llama-2-7B-Chat-GGML --chat --listen-port 7862 --api'`
 
-If you'd like to modify the parameters for Oobabooga, it's this section here:
+If you'd like to modify the parameters for Oobabooga, it's this section here of oogapi.py:
 ```py
 request = {
-        'user_input': user_input,
-        'max_new_tokens': 750,
-        'auto_max_new_tokens': False,
-        'history': history,
-        'mode': 'chat',
-        'character': character, # Change/add this in the oogabooga api (chat settings -> character)
-        'instruction_template': 'Vicuna-v1.1', 
-        'your_name': 'You',
-        'regenerate': False,
-        '_continue': False,
-        'stop_at_newline': False,
-        'chat_generation_attempts': 1,
-        'chat-instruct_command': 'Continue the chat dialogue below. Write a single reply for the character "<|Character|>".\n\n<|Prompt|>',
+        'prompt' : prompt,
+        'max_new_tokens' : 750,
+        
+        'do_sample' : False,
+        'temperature' : 1,
+        'top_p' : 0,
+        'typical_p' : 1,
+        'repetition_penalty' : 1.18,
+        'encoder_repetition_penalty' : 1,
+        'top_k' : 40,
+        'num_beams' : 1,
+        'penalty_alpha' : 0,
+        'min_length' : 0,
+        'length_penalty' : 1,
+        'no_repeat_ngram_size' : 0,
+
+        'seed' : -1,
+        'add_bos_token' : True,
+        'ban_eos_token' : False,
+        'skip_special_tokens' : True
     }
 ```
-(From OogaAPI.py in 
 
 
 ## Usage
