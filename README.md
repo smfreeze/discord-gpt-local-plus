@@ -9,5 +9,9 @@ ah fuck this ill do it tomorrow...
 
 
 ## Setup
+```
+git clone
+cd discord-local-chatbot
+pip install requirements.txt
+```
 
-git clone 
