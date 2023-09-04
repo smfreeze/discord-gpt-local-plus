@@ -1,6 +1,8 @@
 # AI Chatbot made in python with discord.py functionality
 Locally run (no chat-gpt) Oogabooga AI Chatbot made with discord.py
 
+This is completely free and doesn't require chat gpt or any API key. You run the large language models yourself using [oogabooga](https://github.com/oobabooga/text-generation-webui).
+
 Records chat history up to 99 messages for EACH discord channel (each channel will have its own unique history and its own unique responses from the bot as a result)
 
 ### Examples:
