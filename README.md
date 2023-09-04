@@ -9,9 +9,12 @@ ah fuck this ill do it tomorrow...
 
 
 ## Setup
+### Step 1:
 ```
 git clone
 cd discord-local-chatbot
 pip install requirements.txt
 ```
-
+### Step 2:
+Open config.ini file in text editor, add your [https://www.youtube.com/watch?v=aI4OmIbkJH8](bot token) 
+Then complete oogabooga setup guide below
