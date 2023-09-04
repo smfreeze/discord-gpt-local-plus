@@ -5,6 +5,7 @@ This is completely free and doesn't require chat gpt or any API key. You run the
 
 Records chat history up to 99 messages for EACH discord channel (each channel will have its own unique history and its own unique responses from the bot as a result)
 
+Loosely inspired by [DeSinc's sallybot](https://github.com/DeSinc/SallyBot).
 ### Examples:
 
 <img src="https://github.com/smfreeze/discord-local-ai-chatbot/assets/117759431/40fd7f89-6d20-426f-977a-417879b6738e" width=450px height=650px>
