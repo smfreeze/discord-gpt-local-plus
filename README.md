@@ -60,7 +60,7 @@ Arguments to be added here include:
 Example of args:
 `'--model TheBloke_Llama-2-7B-Chat-GGML --chat --listen-port 7862 --api'`
 
-If you'd like to modify the parameters for Oobabooga, it's this section here of oogapi.py:
+If you'd like to modify the parameters for the response request, it's this section here of oogapi.py:
 ```py
 request = {
         'prompt' : prompt,
@@ -93,4 +93,4 @@ cd discord-local-ai-chatbot
 python bot.py
 ```
 
-Just run bot.py after successfully setting it up.
+Just run bot.py after successfully setting up oogabooga and the config.
