@@ -16,7 +16,7 @@ cd discord-local-chatbot
 pip install requirements.txt
 ```
 ### Step 2:
-Open config.ini file in text editor, add your [bot token](https://www.youtube.com/watch?v=aI4OmIbkJH8) to the bot_token parameter and save.
+Open config.ini file in text editor, add your [bot token](https://www.youtube.com/watch?v=aI4OmIbkJH8) to the bot_token parameter and save (also change other parameters as you see fit).
 
 ### Step 3:
 Complete oogabooga setup guide below:
