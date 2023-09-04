@@ -7,15 +7,6 @@ Records chat history up to 99 messages for EACH discord channel (each channel wi
 
 <img src="https://github.com/smfreeze/discord-local-ai-chatbot/assets/117759431/40fd7f89-6d20-426f-977a-417879b6738e" width=450px height=650px>
 
-## Usage
-```
-cd discord-local-ai-chatbot
-python bot.py
-```
-
-( Just run bot.py after successfully setting it up )
-
-
 
 ## Setup
 ### Step 1:
@@ -29,3 +20,38 @@ Open config.ini file in text editor, add your [bot token](https://www.youtube.co
 
 ### Step 3:
 Complete oogabooga setup guide below:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Usage
+```
+cd discord-local-ai-chatbot
+python bot.py
+```
+
+( Just run bot.py after successfully setting it up )
