@@ -13,7 +13,7 @@ cd discord-local-ai-chatbot
 python bot.py
 ```
 
-(just run bot.py)
+( Just run bot.py after successfully setting it up )
 
 
 
