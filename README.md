@@ -51,7 +51,7 @@ Arguments to be added here include:
 
 `--loader exllama_hf` uses the much updated ExLLAMA model loader which is literally nearly 2x faster than the previously used loader. Might already be default by the time you see and run this.
 
-`--listen-port 7862` is set to 7862 to not overlap with stable diffusion. `--api` opens a separate port for the program to interface with which runs on port 5000. Port 7862 is still used to view the web interface.
+`--listen-port 7862` is set to 7862 to not overlap with other servers you may have running. `--api` opens a separate port for the program to interface with which runs on port 5000. Port 7862 is still used to view the web interface.
 
 `--xformers` is a very good optimiser that reduces your vram usage for free. This argument is not required but very encouraged. It needs to be installed into Oobabooga to use. Run `cmd_windows.bat` and type `pip install xformers`, when it is done you can type exit.
 
