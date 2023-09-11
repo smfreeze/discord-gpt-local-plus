@@ -24,7 +24,7 @@ pip install requirements.txt
 Open config.ini file in text editor, add your [bot token](https://www.youtube.com/watch?v=aI4OmIbkJH8) to the bot_token parameter and save (also change other parameters as you see fit).
 
 ### Step 3:
-Complete oogabooga setup guide below:
+Complete oogabooga setup guide below.
 
 ## Oogabooga setup
 (Thanks [DeSinc](https://github.com/DeSinc/SallyBot) for some data regarding this Oogabooga setup guide)
