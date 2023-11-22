@@ -1,4 +1,4 @@
-# AI Chatbot made in python with discord.py functionality
+# AI Chatbot made in python for discord
 Locally run (no chat-gpt) Oogabooga AI Chatbot made with discord.py
 
 This is completely free and doesn't require chat gpt or any API key. You run the large language models yourself using [the oogabooga text generation web ui](https://github.com/oobabooga/text-generation-webui).
